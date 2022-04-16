@@ -25,23 +25,25 @@ public class MarkdownParse {
 
             int closeBracket = markdown.indexOf("]", openBracket);
 
-            // if there is a new line between the brackets,
-            // This is not a link
-            if (newLineAfterOpenBracket < closeBracket
-                    && newLineAfterOpenBracket > openBracket) {
-                break;
-            }
-
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
 
             int newLineAfterOpenParen = markdown.indexOf("\n", openBracket);
 
+            // if there is a new line between the brackets,
+            // This is not a link
+            if (newLineAfterOpenBracket < closeBracket
+                    && newLineAfterOpenBracket > openBracket) {
+                currentIndex = closeParen + 1;
+                continue;
+            }
+
             // if there is a new line between the parentheses,
             // This is not a link
             if (newLineAfterOpenParen < closeBracket
                     && newLineAfterOpenParen > openBracket) {
-                break;
+                currentIndex = closeParen + 1;
+                continue;
             }
 
             // Let's check if this is an image!
