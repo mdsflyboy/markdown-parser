@@ -22,7 +22,14 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+
+            // Let's check if this is an image!
+            int closestImage = markdown.indexOf("Image", openBracket);
+
+            // If this is not an image
+            if (closestImage > closeBracket || closestImage < openBracket) {
+                toReturn.add(markdown.substring(openParen + 1, closeParen));
+            }
             currentIndex = closeParen + 1;
         }
 
