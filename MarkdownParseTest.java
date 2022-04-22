@@ -20,14 +20,59 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
-    @Test
-    public void getLinksTest() throws IOException {
-        Path file = Path.of("test-file.md");
+    private ArrayList<String> getLinksTester(String fileName) throws IOException {
+        Path file = Path.of(fileName);
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
+        return links;
+    }
+
+    @Test
+    public void testFileTest() throws IOException {
+        ArrayList<String> links = getLinksTester("test-file.md");
         List<String> expectedLinks = List.of(
                 "https://something.com",
                 "some-thing.html");
-        assertEquals(expectedLinks.toArray(), links.toArray());
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void breakingFileTest() throws IOException {
+        ArrayList<String> links = getLinksTester("breaking-file.md");
+        List<String> expectedLinks = List.of(
+                "https://something.com",
+                "some-thing.html");
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void imageBugTester() throws IOException {
+        ArrayList<String> links = getLinksTester("image-bug.md");
+        List<String> expectedLinks = List.of(
+                "https://something.com",
+                "some-thing.html");
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void spacedLinkTester() throws IOException {
+        ArrayList<String> links = getLinksTester("spaced-link.md");
+        List<String> expectedLinks = List.of();
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void noLinksTester() throws IOException {
+        ArrayList<String> links = getLinksTester("no-links.md");
+        List<String> expectedLinks = List.of();
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void spacedLinkTester2() throws IOException {
+        ArrayList<String> links = getLinksTester("spaced-links-with-other-links.md");
+        List<String> expectedLinks = List.of(
+                "google.com");
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 }
