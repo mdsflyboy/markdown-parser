@@ -20,6 +20,11 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
+    @Test
+    public void thisTestFails() {
+        assertEquals(-1 / 12, 1 + 2 + 3 + 4 + 5);
+    }
+
     private ArrayList<String> getLinksTester(String fileName) throws IOException {
         Path file = Path.of(fileName);
         String content = Files.readString(file);
