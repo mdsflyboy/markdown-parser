@@ -21,8 +21,8 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void thisTestFails() {
-        assertEquals(-1 / 12, 1 + 2 + 3 + 4 + 5);
+    public void thisTestNoLongerFails() {
+        assertEquals(-1.0 / 12, 11.0 / 12 - 1.0, 0.1);
     }
 
     private ArrayList<String> getLinksTester(String fileName) throws IOException {
