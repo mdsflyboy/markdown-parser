@@ -63,7 +63,7 @@ public class MarkdownParseTest {
     public void spacedLinkTester() throws IOException {
         ArrayList<String> links = getLinksTester("spaced-link.md");
         //failed change
-        List<String> expectedLinks = List.of("some-thing.html");
+        List<String> expectedLinks = List.of();
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 
