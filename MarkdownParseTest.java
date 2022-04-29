@@ -32,7 +32,7 @@ public class MarkdownParseTest {
         ArrayList<String> links = getLinksTester("test-file.md");
         List<String> expectedLinks = List.of(
                 "https://something.com",
-                "some-thing.html");
+                "some-thing.");
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 
