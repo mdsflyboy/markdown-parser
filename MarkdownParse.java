@@ -30,10 +30,20 @@ public class MarkdownParse {
 
             int newLineAfterOpenParen = markdown.indexOf("\n", openBracket);
 
+            int newLineAfterClosingBrakcet =  markdown.indexOf("\n", closeBracket);
+
             // if there is a new line between the brackets,
             // This is not a link
             if (newLineAfterOpenBracket < closeBracket
                     && newLineAfterOpenBracket > openBracket) {
+                currentIndex = closeParen + 1;
+                continue;
+            }
+
+            // if there is a new line between the brackets and parenthesis,
+            // This is not a link
+            if (closeBracket < newLineAfterClosingBrakcet
+                    && newLineAfterClosingBrakcet < openParen) {
                 currentIndex = closeParen + 1;
                 continue;
             }

@@ -84,8 +84,7 @@ public class MarkdownParseTest {
     @Test
     public void group2Break() throws IOException {
         ArrayList<String> links = getLinksTester("group2-break.md");
-        List<String> expectedLinks = List.of(
-                "[Test.Link.com]");
-        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+        List<String> expectedLinks = List.of();
+                assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 }
