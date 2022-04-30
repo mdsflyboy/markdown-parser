@@ -80,4 +80,11 @@ public class MarkdownParseTest {
                 "google.com");
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
+
+    @Test
+    public void newFailedTest() throws IOException{
+        ArrayList<String> links = getLinksTester("newFailedInput.md");
+        List<String> expectedLinks = List.of();
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
 }
