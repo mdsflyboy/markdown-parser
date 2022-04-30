@@ -83,7 +83,7 @@ public class MarkdownParseTest {
 
     @Test
     public void newFailedTest() throws IOException{
-        ArrayList<String> links = getLinksTester("newFailedInput.md");
+        ArrayList<String> links = getLinksTester("nestedParenthesisFailure.md");
         List<String> expectedLinks = List.of();
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }

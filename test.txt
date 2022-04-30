@@ -5,9 +5,8 @@ Date:   Fri Apr 22 16:54:36 2022 -0700
     Adding basic file tests
     
     Command:
-    clear && javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" Mar
-    kdownParseTest.java && java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1
-    .3.jar" org.junit.runner.JUnitCore MarkdownParseTest
+    clear && 
+javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java && java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
 
 commit 80103766c7e2ae1ebf9f17e7a431d963095854e7
 Author: mdsflyboy <mdsflyboy@gmail.com>
