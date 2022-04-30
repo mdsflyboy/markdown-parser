@@ -62,6 +62,10 @@ public class MarkdownParse {
             // If this is not an image
             if (closestImage > closeBracket || closestImage < openBracket) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
+                //if there is empty link, ignore
+                if(toReturn.get(toReturn.size() - 1).isEmpty()){
+                    toReturn.remove(currentIndex);
+                }
             }
             currentIndex = closeParen + 1;
         }
