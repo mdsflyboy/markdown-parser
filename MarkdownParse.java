@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class MarkdownParse {
 
+    // Test change
     public static ArrayList<String> getLinks(String markdown) {
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link upto next )
@@ -30,7 +31,7 @@ public class MarkdownParse {
 
             int newLineAfterOpenParen = markdown.indexOf("\n", openBracket);
 
-            int newLineAfterClosingBrakcet =  markdown.indexOf("\n", closeBracket);
+            int newLineAfterClosingBrakcet = markdown.indexOf("\n", closeBracket);
 
             // if there is a new line between the brackets,
             // This is not a link
@@ -62,8 +63,8 @@ public class MarkdownParse {
             // If this is not an image
             if (closestImage > closeBracket || closestImage < openBracket) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
-                //if there is empty link, ignore
-                if(toReturn.get(toReturn.size() - 1).isEmpty()){
+                // if there is empty link, ignore
+                if (toReturn.get(toReturn.size() - 1).isEmpty()) {
                     toReturn.remove(currentIndex);
                 }
             }

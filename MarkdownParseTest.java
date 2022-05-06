@@ -82,7 +82,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void newFailedTest() throws IOException{
+    public void newFailedTest() throws IOException {
         ArrayList<String> links = getLinksTester("nestedParenthesisFailure.md");
         List<String> expectedLinks = List.of();
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
@@ -92,6 +92,6 @@ public class MarkdownParseTest {
     public void group2Break() throws IOException {
         ArrayList<String> links = getLinksTester("group2-break.md");
         List<String> expectedLinks = List.of();
-                assertArrayEquals(expectedLinks.toArray(), links.toArray());
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 }
