@@ -39,6 +39,7 @@ public class MarkdownParseTest {
                 "https://something.com",
                 "some-thing.html");
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 
     @Test
