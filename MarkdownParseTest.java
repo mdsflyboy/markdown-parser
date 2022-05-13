@@ -20,6 +20,11 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
+    @Test
+    public void thisTestNoLongerFails() {
+        assertEquals(-1.0 / 12, 11.0 / 12 - 1.0, 0.1);
+    }
+
     private ArrayList<String> getLinksTester(String fileName) throws IOException {
         Path file = Path.of(fileName);
         String content = Files.readString(file);
@@ -33,6 +38,7 @@ public class MarkdownParseTest {
         List<String> expectedLinks = List.of(
                 "https://something.com",
                 "some-thing.html");
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 
@@ -73,6 +79,20 @@ public class MarkdownParseTest {
         ArrayList<String> links = getLinksTester("spaced-links-with-other-links.md");
         List<String> expectedLinks = List.of(
                 "google.com");
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void newFailedTest() throws IOException {
+        ArrayList<String> links = getLinksTester("nestedParenthesisFailure.md");
+        List<String> expectedLinks = List.of();
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void group2Break() throws IOException {
+        ArrayList<String> links = getLinksTester("group2-break.md");
+        List<String> expectedLinks = List.of();
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
 }

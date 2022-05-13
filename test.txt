@@ -1,0 +1,145 @@
+commit fa1d2cb6ef842bcc3aee4ad5ffbd04854faef353
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 22 16:54:36 2022 -0700
+
+    Adding basic file tests
+    
+    Command:
+    clear && 
+javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java && java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
+
+commit 80103766c7e2ae1ebf9f17e7a431d963095854e7
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 22 16:42:37 2022 -0700
+
+    Adding Test to MarkdownPaseTestfor test-file.md
+    
+    clear && javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" Mar
+    kdownParseTest.java && java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1
+    .3.jar" org.junit.runner.JUnitCore MarkdownParseTest
+
+commit 080b09ec55b73fd5a3e393eedc962c4c66b1a9bf
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 22 16:23:25 2022 -0700
+
+    Adding Testing class.
+    
+    Commands
+    javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java
+    java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
+
+commit 14eef7e0c003bf95d268dd34465b0e60a0b8b5f2
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 17:14:16 2022 -0700
+
+    Fixing issue where program ignores links after spaced out link
+
+commit 1ca59a47b0451590d3a672f24de9f6f55774e9fb
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 17:12:32 2022 -0700
+
+    Does not detect any more links after a spaced out link
+    
+    For spaced-links-with-other-links.md:
+    Program outputs:
+    []
+    
+    When it should output:
+    [ "google.com" ]
+
+commit 7da9686750064b773e8f59da0e6d58cf5f756e40
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 17:10:10 2022 -0700
+
+    Fixing how it edits separated links!
+
+commit aa1c41a3ebf6602d4cfa6d189a0638d196bfbc2d
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 17:32:00 2022 -0700
+
+    Bug when dealing with separated links!
+    
+    For super long link (which is technically not a link)
+    It detects it as a link.
+    It should not be a link!
+    
+    Run with spaced-link.md
+    
+    Output:
+    [
+    
+        google.com
+    
+    ]
+
+commit 5063c3145fcfb57e51f1106c207c28c8dbb3e76a
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 17:28:41 2022 -0700
+
+    Fixing issue with detecting image in MarkdownParse.java
+    
+    Finally image-bug.md outputs correctly
+
+commit 1d4caabbeca9b12818ed6c6ac9a620f2e69c22a1
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 16:51:09 2022 -0700
+
+    Found bug when including images
+    
+    Outputted: [https://something.com, some-thing.html,
+    https://source.unsplash.com/user/c_v_r]
+    
+    Where "https://source.unsplash.com/user/c_v_r"
+    is an image, not a normal link!
+
+commit 9127e15219afc2eb64302fdfcf5d838fa2624ab4
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 16:49:28 2022 -0700
+
+    Fixing bug in MarkdownParse.java that breaks it when file doesn't end
+    with ")"
+
+commit 8ef64489178f3de86514cd3347cf83afb9ad5f96
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 16:45:05 2022 -0700
+
+    Adding bug testing case (breaking-file.md)
+
+commit d06331a09cae13827b799bacc0062753ac95e84f
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 16:44:02 2022 -0700
+
+    Revert "Fixing MarkdownParse.java"
+    Accidently committed solution
+    
+    This reverts commit dcb51696b38129a504035fe88a88404468671f4a.
+
+commit dcb51696b38129a504035fe88a88404468671f4a
+Author: mdsflyboy <mdsflyboy@gmail.com>
+Date:   Fri Apr 15 16:37:39 2022 -0700
+
+    Fixing MarkdownParse.java
+
+commit 9cc42a8f0b4f1d6eeb83bab8ba245fa8887fdd5f
+Author: Nidhi Dhamnani <nidhidhamnani@gmail.com>
+Date:   Mon Apr 11 09:09:45 2022 +0530
+
+    Update test-file.md
+
+commit 35e7e8bbea57bc4bd733a9be7b7aa2be17c270c6
+Author: Nidhi Dhamnani <nidhidhamnani@gmail.com>
+Date:   Mon Apr 11 02:01:15 2022 +0530
+
+    Create test-file.md
+
+commit 7a7ad0cf2ddb295469a2081fe6e45f64b1da6554
+Author: Nidhi Dhamnani <nidhidhamnani@gmail.com>
+Date:   Mon Apr 11 02:00:52 2022 +0530
+
+    Create MarkdownParse.java
+
+commit 8d1c5e879f3646dcdd947fd9afa156e23026543f
+Author: Nidhi Dhamnani <nidhidhamnani@gmail.com>
+Date:   Mon Apr 11 01:59:27 2022 +0530
+
+    Initial commit

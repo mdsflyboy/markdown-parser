@@ -30,10 +30,20 @@ public class MarkdownParse {
 
             int newLineAfterOpenParen = markdown.indexOf("\n", openBracket);
 
+            int newLineAfterClosingBrakcet = markdown.indexOf("\n", closeBracket);
+
             // if there is a new line between the brackets,
             // This is not a link
             if (newLineAfterOpenBracket < closeBracket
                     && newLineAfterOpenBracket > openBracket) {
+                currentIndex = closeParen + 1;
+                continue;
+            }
+
+            // if there is a new line between the brackets and parenthesis,
+            // This is not a link
+            if (closeBracket < newLineAfterClosingBrakcet
+                    && newLineAfterClosingBrakcet < openParen) {
                 currentIndex = closeParen + 1;
                 continue;
             }
@@ -52,6 +62,10 @@ public class MarkdownParse {
             // If this is not an image
             if (closestImage > closeBracket || closestImage < openBracket) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
+                // if there is empty link, ignore
+                if (toReturn.get(toReturn.size() - 1).isEmpty()) {
+                    toReturn.remove(currentIndex);
+                }
             }
             currentIndex = closeParen + 1;
         }
@@ -64,5 +78,6 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
         System.out.println(links);
+        System.out.println("change");
     }
 }
