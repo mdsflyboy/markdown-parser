@@ -27,8 +27,6 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
 
-            int newLineAfterOpenParen = markdown.indexOf("\n", openBracket);
-
             // if there is a new line between the first bracket,
             // and the last parethesis
             // This is not a link
