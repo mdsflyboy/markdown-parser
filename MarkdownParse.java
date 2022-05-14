@@ -20,7 +20,6 @@ public class MarkdownParse {
                 break;
             }
 
-            // newLineChecker
             int newLineAfterOpenBracket = markdown.indexOf("\n", openBracket);
 
             int closeBracket = markdown.indexOf("]", openBracket);
@@ -30,28 +29,11 @@ public class MarkdownParse {
 
             int newLineAfterOpenParen = markdown.indexOf("\n", openBracket);
 
-            int newLineAfterClosingBrakcet = markdown.indexOf("\n", closeBracket);
-
-            // if there is a new line between the brackets,
+            // if there is a new line between the first bracket,
+            // and the last parethesis
             // This is not a link
-            if (newLineAfterOpenBracket < closeBracket
-                    && newLineAfterOpenBracket > openBracket) {
-                currentIndex = closeParen + 1;
-                continue;
-            }
-
-            // if there is a new line between the brackets and parenthesis,
-            // This is not a link
-            if (closeBracket < newLineAfterClosingBrakcet
-                    && newLineAfterClosingBrakcet < openParen) {
-                currentIndex = closeParen + 1;
-                continue;
-            }
-
-            // if there is a new line between the parentheses,
-            // This is not a link
-            if (newLineAfterOpenParen < closeBracket
-                    && newLineAfterOpenParen > openBracket) {
+            if(newLineAfterOpenBracket < closeParen 
+                    && newLineAfterOpenBracket > openBracket){
                 currentIndex = closeParen + 1;
                 continue;
             }
@@ -61,9 +43,11 @@ public class MarkdownParse {
 
             // If this is not an image
             if (closestImage > closeBracket || closestImage < openBracket) {
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
+                String link = markdown.substring(openParen + 1, closeParen);
+                link = link.trim();
+                toReturn.add(link);
                 // if there is empty link, ignore
-                if (toReturn.get(toReturn.size() - 1).isEmpty()) {
+                if (link.isEmpty()) {
                     toReturn.remove(currentIndex);
                 }
             }

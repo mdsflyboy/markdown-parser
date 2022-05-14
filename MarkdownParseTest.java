@@ -95,4 +95,11 @@ public class MarkdownParseTest {
         List<String> expectedLinks = List.of();
         assertArrayEquals(expectedLinks.toArray(), links.toArray());
     }
+
+    @Test
+    public void test3() throws IOException {
+        ArrayList<String> links = getLinksTester("one-space-file.md");
+        List<String> expectedLinks = List.of();
+        assertArrayEquals(expectedLinks.toArray(), links.toArray());
+    }
 }
