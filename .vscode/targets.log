@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 20 17:16:22 2022
+# Make data base, printed on Sun May 22 13:32:22 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ USERPROFILE = C:\Users\mdsfl
 # environment
 LOCALAPPDATA = C:\Users\mdsfl\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-a62a1017-8cfa-49a4-b6fe-e837eaf52926-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-00727135-ff60-4443-a35a-fdadfdd171a4-sock
 # environment
 VSCODE_CWD = C:\Users\mdsfl\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -39,7 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_25628_EIHJVPJCXWNEYAKE
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_22668_AAGKVXEKSWEKOJLF
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -55,7 +55,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\mdsfl\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = C:\Users\mdsfl\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LANG = C
 # default
@@ -95,13 +95,14 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 25628
+VSCODE_PID = 22668
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
 *F = $(notdir $*)
 # environment
-SW_SIM_TEMP = C:\ProgramData\SOLIDWORKS\SW_net_sim_temp\
+SW_SIM_TEMP = C:\ProgramData\SOLIDWORKS\S 
+W_net_sim_temp\
 # automatic
 <D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
@@ -114,6 +115,8 @@ MAKE_HOST := Windows32
 PROGRAMDATA = C:\ProgramData
 # default
 SHELL := sh.exe
+# makefile (from 'Makefile', line 2)
+CLASSPATH = ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar"
 # environment
 HOMEPATH = \Users\mdsfl
 # environment
@@ -173,6 +176,8 @@ GNUMAKEFLAGS :=
 # environment
 OS = Windows_NT
 # environment
+__COMPAT_LAYER = DetectorsAppHealth
+# environment
 PLATFORMIO_PATH = C:\Users\mdsfl\.platformio\python3;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\Inkscape\bin;C:\Gradle\gradle-7.3.3\bin;C:\Program Files\Java\jdk-17.0.2\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\mdsfl\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mdsfl\AppData\Local\Programs\Python\Python39\;C:\Users\mdsfl\AppData\Local\Microsoft\WindowsApps;C:\Users\mdsfl\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mdsfl\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;;C:\Users\mdsfl\AppData\Local\GitHubDesktop\bin;C:\Users\mdsfl\AppData\Roaming\npm;C:\Users\mdsfl\AppData\Local\atom\bin;C:\Users\mdsfl\AppData\Local\Microsoft\WindowsApps;;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\Inkscape\bin;C:\Gradle\gradle-7.3.3\bin;C:\Program Files\Java\jdk-17.0.2\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\mdsfl\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mdsfl\AppData\Local\Programs\Python\Python39\;C:\Users\mdsfl\AppData\Local\Microsoft\WindowsApps;C:\Users\mdsfl\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mdsfl\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;;C:\Users\mdsfl\AppData\Local\GitHubDesktop\bin;C:\Users\mdsfl\AppData\Roaming\npm;C:\Users\mdsfl\AppData\Local\atom\bin;C:\Users\mdsfl\AppData\Local\Microsoft\WindowsApps;
 # makefile
 .DEFAULT_GOAL := test
@@ -203,7 +208,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\mdsfl\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\90e21258becebd148bdfad031ce69590-1.67.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\90e21258becebd148bdfad031ce69590-1.67.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -215,13 +220,14 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FE 
+ATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 8d01
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=104/1024=10%, Rehash=0, Collisions=11/131=8%
+# Load=106/1024=10%, Rehash=0, Collisions=11/134=8%
 
 # Pattern-specific Variable Values
 
@@ -229,21 +235,20 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/mdsfl/Documents/GitHub/markdown-parser, mtime 1652488081): 28 files, no impossibilities.
+# . (key c:/Users/mdsfl/Documents/GitHub/markdown-parser, mtime 1653092264): 27 files, no impossibilities.
 
-# 28 files, no impossibilities in 1 directories.
+# 27 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-# No implic 
-it rules.
+# No implicit rules.
 
 # Files
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-13 17:16:29
+#  Last modified 2022-05-20 17:17:38
 #  File has been updated.
 #  Successfully updated.
 
@@ -263,8 +268,8 @@ MarkdownParseTest.class: MarkdownParseTest.java MarkdownParse.class
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
-	javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
+#  recipe to execute (from 'Makefile', line 12):
+	javac -cp $(CLASSPATH) MarkdownParseTest.java
 
 # Not a target:
 all:
@@ -273,7 +278,8 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
+# 
+ Not a target:
 MarkdownParse.java:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -283,15 +289,15 @@ test: MarkdownParseTest.class
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 2):
-	java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore  MarkdownParseTest
+#  recipe to execute (from 'Makefile', line 8):
+	java -cp $(CLASSPATH) org.junit.runner.JUnitCore  MarkdownParseTest
 
 MarkdownParse.class: MarkdownParse.java
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 4):
-	javac MarkdownParse.java
+#  recipe to execute (from 'Makefile', line 10):
+	javac -cp $(CLASSPATH) MarkdownParse.java
 
 # files hash-table stats:
 # Load=9/1024=1%, Rehash=0, Collisions=0/24=0%
@@ -301,12 +307,12 @@ MarkdownParse.class: MarkdownParse.java
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 431 B / avg = 13 B
-# current buf: size = 8174 B / used = 431 B / count = 32 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 418 B / avg = 13 B
+# current buf: size = 8174 B / used = 418 B / count = 31 / avg = 13 B
 
-# strcache performance: lookups = 45 / hit rate = 28%
+# strcache performance: lookups = 44 / hit rate = 29%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=0/45=0%
-# Finished Make data base on Fri May 20 17:16:22 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/44=0%
+# Finished Make data base on Sun May 22 13:32:22 2022
 
  
